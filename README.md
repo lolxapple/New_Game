@@ -1,2 +1,2 @@
-# Visual-Novel-1
-A visual novel
+# New Game!!
+A visual novel about 2 guys trying to make a visual novel
