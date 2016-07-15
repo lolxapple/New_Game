@@ -48,13 +48,21 @@ label start:
     
     scene busstop
     with fade
+    
     "6 Minutes Later"
+    
     "The bus comes by again and doesn't stop."
+    
     t "No! Wait! Crap, guess I'll use a different bus stop..."
+    
     play audio ding
+    
     ""
+    
     t "Makoto must've texted me asking what's taking so long..."
+    
     t "Bus... just... missed... me... twice. Send!"
+    
     m "lmfao"
     
     
