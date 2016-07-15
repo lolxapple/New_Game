@@ -12,12 +12,18 @@ define t = Character('Takano', color="#FFFFFF")
 #Declare Sounds
 define audio.ding = "sound/ding.mp3"
 define audio.dong = "sound/dingdong.mp3"
+define audio.morning = "sound/morning.mp3"
 
 
 # The game starts here.
 label start:
     scene bedbg
-    "Today is a sunny day"
+    
+    play audio "<from 0 to 10.3>sound/morning.mp3"
+    
+    m "What a nice morning..."
+    
+    ""
 
     m "I wonder what I'm going to do today..."
 
@@ -38,6 +44,10 @@ label start:
     t "Ye m8."
     
     m "Bring your laptop!"
+    
+    stop sound
+    stop audio
+    
     
     scene busstop
     with fade
