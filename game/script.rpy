@@ -37,6 +37,8 @@ label start:
     
     t "Ye m8."
     
+    m "Bring your laptop!"
+    
     scene busstop
     with fade
     
@@ -103,9 +105,20 @@ label start:
     scene bedbg
     with fade
     
+    t "So what's up?"
     
+    m "Let's make a game!"
     
+    t "Hm? What type of game?"
     
+    m "A visual novel!"
     
+    t "Alright, I know a pretty good engine."
+    
+    m "Really, what's it called?"
+    
+    t "It was called Pan.Py or something."
+    
+    m "Sounds lit."
     
 return

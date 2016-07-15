@@ -17,7 +17,7 @@ init -1 python hide:
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"New Game"
+    config.window_title = u"Untitled"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
@@ -256,7 +256,7 @@ init -1 python hide:
     ## stored. (It needs to be set early, before any other init code
     ## is run, so the persistent information can be found by the init code.)
 python early:
-    config.save_directory = "NewGameSaves"
+    config.save_directory = "UntitledSaves"
 
 init -1 python hide:
     #########################################
