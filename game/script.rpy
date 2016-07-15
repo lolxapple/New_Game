@@ -3,6 +3,7 @@
 # Declare images below this line, using the image statement.
 image bedbg = "bed-bg.jpg"
 image busstop = "bus.jpg"
+image house = "house.jpg"
 
 # Declare characters used by this game.
 define m = Character('Makoto', color="#00FFFF")
@@ -79,8 +80,10 @@ label start:
     
     t "I hope she reads it..."
     
+    scene house
+    with fade
+    
+    ""
     
     
-    
-
 return
