@@ -8,6 +8,9 @@ image busstop = "bus.jpg"
 define m = Character('Makoto', color="#00FFFF")
 define t = Character('Takano', color="#FFFFFF")
 
+#Declare Sounds
+define audio.ding = "sound/ding.mp3"
+
 
 # The game starts here.
 label start:
@@ -35,12 +38,27 @@ label start:
     scene busstop
     with fade
     
-    m "Bus should be coming soon..."
+    t "Bus should be coming soon..."
     
-    m "Ah! The bus is here!"
+    t "Ah! The bus is here!"
     
     "The bus doesn't stop and continues driving, skipping Takano."
     
-    m "Hey!!!!"
+    t "Hey!!! Shoot! The next bus should be coming in about 6 minutes..."
+    
+    scene busstop
+    with fade
+    "6 Minutes Later"
+    "The bus comes by again and doesn't stop."
+    t "No! Wait! Crap, guess I'll use a different bus stop..."
+    play audio ding
+    ""
+    t "Makoto must've texted me asking what's taking so long..."
+    t "Bus... just... missed... me... twice. Send!"
+    m "lmfao"
+    
+    
+    
+    
 
 return
