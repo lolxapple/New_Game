@@ -11,6 +11,7 @@ define t = Character('Takano', color="#FFFFFF")
 
 #Declare Sounds
 define audio.ding = "sound/ding.mp3"
+define audio.dong = "sound/dingdong.mp3"
 
 
 # The game starts here.
@@ -84,6 +85,27 @@ label start:
     with fade
     
     ""
+    
+    play audio dong
+    
+    ""
+    
+    m "Coming!"
+    
+    "Makoto answers the door."
+    
+    t "Sup"
+    
+    m "Come in"
+    
+    ""
+    
+    scene bedbg
+    with fade
+    
+    
+    
+    
     
     
 return

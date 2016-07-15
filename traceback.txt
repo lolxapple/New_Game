@@ -1,20 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 44, in script
-    m "Hey!! $%@*!!!!"
-TypeError: * wants int
+  File "game/script.rpy", line 89, in script
+    play audio dingdong
+  File "renpy/common/000statements.rpy", line 108, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 30, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 89, in <module>
+    play audio dingdong
+NameError: name 'dingdong' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 44, in script
-    m "Hey!! $%@*!!!!"
-  File "C:\Program Files (x86)\renpy-6.99.10-sdk\renpy\ast.py", line 604, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "C:\Program Files (x86)\renpy-6.99.10-sdk\renpy\exports.py", line 1114, in say
-    what = what % tag_quoting_dict
-TypeError: * wants int
+  File "game/script.rpy", line 89, in script
+    play audio dingdong
+  File "C:\Program Files (x86)\renpy-6.99.10-sdk\renpy\ast.py", line 1697, in execute
+    self.call("execute")
+  File "C:\Program Files (x86)\renpy-6.99.10-sdk\renpy\ast.py", line 1715, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Program Files (x86)\renpy-6.99.10-sdk\renpy\statements.py", line 144, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 108, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 30, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Program Files (x86)\renpy-6.99.10-sdk\renpy\python.py", line 1606, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Program Files (x86)\renpy-6.99.10-sdk\renpy\python.py", line 1601, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 89, in <module>
+    play audio dingdong
+NameError: name 'dingdong' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 6.99.10.1227
