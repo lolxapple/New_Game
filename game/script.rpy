@@ -65,6 +65,20 @@ label start:
     
     m "lmfao"
     
+    scene busstop
+    with fade
+    
+    "The bus arrives."
+    t "Finally!"
+    
+    "Takano takes a seat, but then he remembers that his mom had asked him to thaw a chicken!"
+    
+    t "Oh shit."
+    
+    "Takano then furiously begins texting his sister, which is at home, to thaw a chicken."
+    
+    t "I hope she reads it..."
+    
     
     
     
