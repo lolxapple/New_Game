@@ -18,6 +18,7 @@ define audio.morning = "sound/morning.mp3"
 # The game starts here.
 label start:
     scene bedbg
+    with fade
     
     play audio "<from 0 to 10.3>sound/morning.mp3"
     
@@ -130,5 +131,54 @@ label start:
     t "It was called Pan.Py or something."
     
     m "Sounds lit."
+    
+    t "So what's the story about?"
+    
+    m "Shit, I don't know."
+    
+    t "Hmm... what do you want it to be about?"
+    
+    m "Hmm..."
+    
+menu:
+    "What should the visual novel be about?"
+    
+    "An action.":
+        jump actionvn
+    
+    "A romance.":
+        jump romvn
+    
+    "School life.":
+        jump slvn
+    
+    "Honestly don't know.":
+        jump dead1
+    
+label dead1:
+    t "You don't know?"
+    
+    m "Completely out of ideas."
+    
+    t "Oh well. Lets go play some Pokemon GO."
+    
+    ""
+    
+    ".:. Bad Ending."
+    
+    return
+    
+label actionvn:
+    m "Let's make an action visual novel!"
+    return
+    
+label romvn:
+    m "Let's make a romance visual novel!"
+    return
+    
+label slvn:
+    m "Let's make a school life visual novel!"
+    return
+    
     
 return
