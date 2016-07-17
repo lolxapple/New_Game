@@ -17,10 +17,15 @@ define audio.morning = "sound/morning.mp3"
 
 # The game starts here.
 label start:
+
+    $ action = False
+    $ rom = False
+    $ school = False
+    
     scene bedbg
     with fade
     
-    play audio "<from 0 to 10.3>sound/morning.mp3"
+    play audio "<from 0 to 10.4>sound/morning.mp3"
     
     m "What a nice morning..."
     
@@ -144,16 +149,35 @@ menu:
     "What should the visual novel be about?"
     
     "An action.":
-        jump actionvn
+        $ action = True
+        jump start2
     
     "A romance.":
-        jump romvn
+        $ rom = True
+        jump start2
     
     "School life.":
-        jump slvn
+        $ school = True
+        jump start2
     
     "Honestly don't know.":
         jump dead1
+    
+label start2:
+
+    if action:
+        m "Let's make it an action!"
+        
+    if rom:
+        m "Let's make it a romance!"
+        
+    if school:
+        m "Let's make a school life!"
+        
+    t "Alright. Sounds good."
+    
+return
+    
     
 label dead1:
     t "You don't know?"
@@ -168,23 +192,6 @@ label dead1:
     
     return
     
-label actionvn:
-    m "Let's make an action visual novel!"
-    
-    t "Alright. Sounds good."
-    
-    t "Hmm. What should the game be called?"
-    
-    
-    return
-    
-label romvn:
-    m "Let's make a romance visual novel!"
-    return
-    
-label slvn:
-    m "Let's make a school life visual novel!"
-    return
     
     
 return
