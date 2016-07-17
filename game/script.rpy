@@ -76,7 +76,7 @@ label start:
     
     t "Makoto must've texted me asking what's taking so long..."
     
-    t "Bus... just... missed... me... twice. Send!"
+    "Takano replies that two busses just missed him."
     
     m "lmfao"
     
@@ -160,7 +160,7 @@ label dead1:
     
     m "Completely out of ideas."
     
-    t "Oh well. Lets go play some Pokemon GO."
+    t "Oh well. Let's go play some Pokemon GO!"
     
     ""
     
@@ -170,6 +170,12 @@ label dead1:
     
 label actionvn:
     m "Let's make an action visual novel!"
+    
+    t "Alright. Sounds good."
+    
+    t "Hmm. What should the game be called?"
+    
+    
     return
     
 label romvn:
