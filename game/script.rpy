@@ -14,6 +14,9 @@ define audio.ding = "sound/ding.mp3"
 define audio.dong = "sound/dingdong.mp3"
 define audio.morning = "sound/morning.mp3"
 
+#Define Misc
+
+
 
 # The game starts here.
 label start:
@@ -112,9 +115,9 @@ label start:
     
     "Makoto answers the door."
     
-    t "Sup"
+    t "Sup."
     
-    m "Come in"
+    m "Come in."
     
     ""
     
@@ -175,6 +178,18 @@ label start2:
         m "Let's make a school life!"
         
     t "Alright. Sounds good."
+    
+    t "So what's the game going to be called?"
+    
+    m "Shit, I don't know..."
+    
+    if action:
+        $ aname = renpy.input ("What's the name of the action visual novel?")
+        if aname == "":
+            $ aname = "Fight-on"
+    
+    m "Let's call it \"%(aname)s!\""
+       
     
 return
     
